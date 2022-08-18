@@ -11,10 +11,6 @@
     <div class="android_schema_lock" >
 
     </div>
-
-    <span class="android_schema_lock2" >
-
-    </span>
 </body>
 
 <script>
@@ -22,11 +18,16 @@
     lock.lockColor = '#212581'
     lock.lockHeight = '400'
     lock.lockWidth = '400'
-    lock.lockPointsDimentions = 2
+    lock.lockPointsDimentions = 10
+    lock.lineColor = 'white'
+    lock.lineWidth = 5
+    lock.unActivePointColor = 'red'
+    lock.bColorOnMouseMove = 'yellow'
     lock.render()
 
-    var lock2 = new AndroidSchemaLock(document.getElementsByClassName('android_schema_lock2')[0],'lock_2')
-    lock2.lockColor = 'blue'
-    lock2.render()
+    lock.on('mouseDown',(e)=>{
+        alert(e)
+    })
+
 </script>
 </html>
