@@ -25,9 +25,19 @@
     lock.bColorOnMouseMove = 'yellow'
     lock.render()
 
-    lock.on('mouseDown',(e)=>{
-        alert(e)
+    lock.on('SchemaDrawingStarted',function(e){
+        console.log(e.detail,'SchemaDrawingStarted') // return int(point),
     })
+    lock.on('SchemaDone',(e)=>{
+        console.log(e.detail,'SchemaDone') // return array(pin), the final int
+    })
+    lock.on('NewActivatePoint',(e)=>{
+        console.log(e.detail,'NewActivatePoint') // return array(pin) and int(point), pin is the current pin, and the point is the new added point
+    })
+
+
+    // TODO  add the solving duration
+
 
 </script>
 </html>

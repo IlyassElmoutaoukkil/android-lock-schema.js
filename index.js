@@ -1,4 +1,7 @@
 function AndroidSchemaLock(element,lock_name=null){
+
+
+    var dummy = document.createElement('dummy');
     var _this = this 
     this.draged = false;
 
@@ -89,7 +92,7 @@ function AndroidSchemaLock(element,lock_name=null){
     
 
 
-
+    this.on = function(event, func){dummy.addEventListener(event, func);};
 
 
     this.lock.addEventListener("mousedown", function(event){
@@ -100,7 +103,7 @@ function AndroidSchemaLock(element,lock_name=null){
         
         for(var l=0;l<document.getElementsByClassName(lock_name+'_round').length;l++){
             e++
-            console.log(e)
+            
             document.getElementById(lock_name+'_'+e+'_r').style.stroke = 'transparent'
             document.getElementById(lock_name+'_'+e).style.fill=_this.unActivePointColor
         }
@@ -123,21 +126,17 @@ function AndroidSchemaLock(element,lock_name=null){
                     document.getElementById(lock_name+'_'+e.int+'_r').style.stroke=_this.roundedPointStrokeColor
                 }
                 if(_this.currentPinNumber.indexOf(e.int)==-1){
+                    dummy.dispatchEvent(new CustomEvent('SchemaDrawingStarted', {detail:{point: e.int}}));
                     _this.currentPin.push([pointX,pointY])
                     // document.getElementById('pin').value = _this.currentPinNumber.join('')
                     _this.currentPinNumber.push(e.int)
-                    console.log(_this.currentPin)     
                 }
             }else{
                 
             }
         }
 
-        const event1 = new CustomEvent('mouseDown',{
-            'hello':'hi'
-        })
-
-        _this.dispatchEvent(event1)
+     
 
         // format (string) = "int,int "
     });
@@ -151,7 +150,7 @@ function AndroidSchemaLock(element,lock_name=null){
         }{
             sc = _this.currentPin.slice(0,_this.currentPin.length).join(' ')
             document.getElementById('Line'+lock_name).setAttribute('points',sc)
-            console.log(_this.currentPinNumber.join(''))
+            dummy.dispatchEvent(new CustomEvent('SchemaDone', {detail:{pin: _this.currentPinNumber}}));
         }
     })
 
@@ -186,14 +185,13 @@ function AndroidSchemaLock(element,lock_name=null){
                             if(_this.roundedActivePoint){
                                 document.getElementById(lock_name+'_'+e.int+'_r').style.stroke=_this.roundedPointStrokeColor
                             }
+                            dummy.dispatchEvent(new CustomEvent('NewActivatePoint', {detail:{pin: _this.currentPinNumber,point:e.int}}));
                             _this.currentPin.push([pointX,pointY])
                             _this.currentPinNumber.push(e.int)
                         }
                     }
                 }
-            }else{
-            }            
-        }else{
+            }          
         }
     })
 }
