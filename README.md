@@ -17,14 +17,16 @@ AndroidSchema has three main events,
 
 --------------------------------------------------------
 <a name="SchemaDrawingStarted">SchemaDrawingStarted</a>
-### return int
+### SchemaDrawingStarted
+return int
 <code>lock.on('SchemaDrawingStarted',function(e){
         console.log(e.detail,'SchemaDrawingStarted')
     })</code> lets you lesten whene the user started drawing the schema and return the first point intiger
 
 ------------------------------------------------
 <a name="SchemaDrawingDone">SchemaDrawingDone</a>
-### return array,int
+### SchemaDrawingDone
+return array,int
 <code>lock.on('SchemaDrawingDone',function(e){
         console.log(e.detail,'SchemaDrawingDone')
     })</code> lets you listen whene the user ends drawing the schema and return the last point intiger, and the complete pin as an array,
@@ -32,7 +34,8 @@ AndroidSchema has three main events,
 
 --------------------------------------------------------
 <a name="NewActivatePoint">NewActivatePoint</a>
-### return array,int
+### NewActivatePoint
+return array,int
 <code>lock.on('NewActivatePoint',function(e){
         console.log(e.detail,'NewActivatePoint')
     })</code> lets you listen whene the user choose a new point while he is drawing the schema,it returns the current pin as an array, and the new point as an intiger
