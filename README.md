@@ -16,14 +16,14 @@ AndroidSchema has three main events,
 
 
 --------------------------------------------------------
-<a name="SchemaDrawingStarted"></a>
+<a name="SchemaDrawingStarted">SchemaDrawingStarted</a>
 ### return int
 <code>lock.on('SchemaDrawingStarted',function(e){
         console.log(e.detail,'SchemaDrawingStarted')
     })</code> lets you lesten whene the user started drawing the schema and return the first point intiger
 
 ------------------------------------------------
-<a name="SchemaDrawingDone"></a>
+<a name="SchemaDrawingDone">SchemaDrawingDone</a>
 ### return array,int
 <code>lock.on('SchemaDrawingDone',function(e){
         console.log(e.detail,'SchemaDrawingDone')
@@ -31,7 +31,7 @@ AndroidSchema has three main events,
 
 
 --------------------------------------------------------
-<a name="NewActivatePoint"></a>
+<a name="NewActivatePoint">NewActivatePoint</a>
 ### return array,int
 <code>lock.on('NewActivatePoint',function(e){
         console.log(e.detail,'NewActivatePoint')
