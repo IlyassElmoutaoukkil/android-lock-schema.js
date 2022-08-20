@@ -28,7 +28,7 @@
     lock.on('SchemaDrawingStarted',function(e){
         console.log(e.detail,'SchemaDrawingStarted') // return int(point),
     })
-    lock.on('SchemaDone',(e)=>{
+    lock.on('SchemaDrawingDone',(e)=>{
         console.log(e.detail,'SchemaDone') // return array(pin), the final int
     })
     lock.on('NewActivatePoint',(e)=>{
@@ -36,7 +36,9 @@
     })
 
 
-    // TODO  add the solving duration
+    // TODO add the solving duration
+    // TODO add documentation
+    // TODO add page to test all parameters
 
 
 </script>

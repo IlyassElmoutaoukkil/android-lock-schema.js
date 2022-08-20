@@ -150,7 +150,7 @@ function AndroidSchemaLock(element,lock_name=null){
         }{
             sc = _this.currentPin.slice(0,_this.currentPin.length).join(' ')
             document.getElementById('Line'+lock_name).setAttribute('points',sc)
-            dummy.dispatchEvent(new CustomEvent('SchemaDone', {detail:{pin: _this.currentPinNumber}}));
+            dummy.dispatchEvent(new CustomEvent('SchemaDrawingDone', {detail:{pin: _this.currentPinNumber}}));
         }
     })
 
