@@ -60,4 +60,4 @@ return array,int
 
 ## Licence & copyright
 
-Bean is copyright &copy; 2011-2012 Jacob Thornton and licenced under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
+AndroidSchemaLock is copyright &copy; 2022-2023 Ilyass ELMOUTAOUKKIL and licenced under the MIT licence. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
