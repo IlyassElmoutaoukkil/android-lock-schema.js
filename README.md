@@ -62,37 +62,37 @@ return array,int
 ########################################################
 ## Parameters
 
-# roundedActivePoint = true 
+### roundedActivePoint 
 show a circle arround the active point
 
-# lockPointsDimentions = 10 
+### lockPointsDimentions 
 dimension of the lock points
 
-# lockHeight = 500 
+### lockHeight 
 dimension of the lock (px, %, rem, ...)
 
-# lockWidth = 500 
+### lockWidth 
 dimension of the lock (px, %, rem, ...)
 
-# unActivePointColor = 'white' 
+### unActivePointColor  
 color of unactiving points
 
-# bColorOnMouseMove = 'red' 
-background color on mouse move 
+### bColorOnMouseMove  
+background color whene the mouse move 
 
-# newActivePointsColor = 'black' 
-new Active Points Color
+### newActivePointsColor  
+new Active Points Color (hex code, rgb, ...)
 
-# lineColor = 'rgb(231, 26, 26)' 
-line color
+### lineColor 
+line color (hex code, rgb, ...)
 
-# lineWidth = '4' 
-line width
+### lineWidth  
+line width 
 
-# roundedPointStroke = '3' 
+### roundedPointStroke  
 circle arround the activated point stroke width 
 
-# roundedPointStrokeColor = 'green' 
+### roundedPointStrokeColor  
 circle arround the activated point stroke color 
 
 
