@@ -4,7 +4,8 @@ AndroidSchema is a small library to empliment Android Schema lock, where you can
 ```js
 var lock = new AndroidSchemaLock(element,'lock_name')
 ```
-
+element is the name of the html tag where you want to add the lock,
+lock_name is a name by your choice, 
 
 ## API
 
@@ -16,7 +17,6 @@ AndroidSchema has three main events,
 
 
 --------------------------------------------------------
-<a name="SchemaDrawingStarted">SchemaDrawingStarted</a>
 ### SchemaDrawingStarted
 return int
 
@@ -30,7 +30,6 @@ return int
 lets you lesten whene the user started drawing the schema and return the first point intiger
 
 ------------------------------------------------
-<a name="SchemaDrawingDone">SchemaDrawingDone</a>
 ### SchemaDrawingDone
 
 return array,int
@@ -45,7 +44,6 @@ return array,int
 
 
 --------------------------------------------------------
-<a name="NewActivatePoint">NewActivatePoint</a>
 ### NewActivatePoint
 return array,int
 
@@ -63,37 +61,37 @@ return array,int
 ## Parameters
 
 ### roundedActivePoint 
-show a circle arround the active point
+show a circle arround the active point  (true or false, default: true )
 
 ### lockPointsDimentions 
-dimension of the lock points
+dimension of the lock points ( default: 10 )
 
 ### lockHeight 
-dimension of the lock (px, %, rem, ...)
+dimension of the lock (px, %, rem, ...; default: 400)
 
 ### lockWidth 
-dimension of the lock (px, %, rem, ...)
+dimension of the lock (px, %, rem, ...; default: 400)
 
 ### unActivePointColor  
-color of unactiving points
+color of unactiving points (hex code, rgb, ...; default: 'red')
 
 ### bColorOnMouseMove  
-background color whene the mouse move 
+background color whene the mouse move (hex code, rgb, ...; default: 'yellow')
 
 ### newActivePointsColor  
-new Active Points Color (hex code, rgb, ...)
+new Active Points Color (hex code, rgb, ...; default: 'black')
 
 ### lineColor 
-line color (hex code, rgb, ...)
+line color (hex code, rgb, ...; default: 'white')
 
 ### lineWidth  
-line width 
+line width (int; default: 10)
 
 ### roundedPointStroke  
-circle arround the activated point stroke width 
+circle arround the activated point stroke width (int; default: 3)
 
 ### roundedPointStrokeColor  
-circle arround the activated point stroke color 
+circle arround the activated point stroke color  (hex code, rgb, ...; default: 'green')
 
 
 
