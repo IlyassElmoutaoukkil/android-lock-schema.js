@@ -18,11 +18,13 @@ function AndroidSchemaLock(element,lock_name=null){
     this.unActivePointColor = 'white' //color of unactiving points
 
     this.bColorOnMouseMove = 'red' // background color on mouse move 
+    this.bColorOnMouseDown = 'blue' // background color on mouse down 
     this.newActivePointsColor = 'black' // new Active Points Color
     
 
     this.lineColor = 'rgb(231, 26, 26)' // line color
     this.lineWidth = '4' // line width
+    this.lineJoin = 'round' //line angles form [arcs | bevel |miter | miter-clip | round]
 
     this.LockId_width = null 
     this.LockId_height = null 
@@ -69,7 +71,7 @@ function AndroidSchemaLock(element,lock_name=null){
         <ellipse class="${lock_name}" id="${lock_name}_9" data="9" cx="75%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
         <ellipse class="${lock_name}_round" id="${lock_name}_9_r" data="1" cx="75%" cy="75%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
-        <polyline stroke-linecap="round" id="Line${lock_name}" points="" style="fill:none;stroke:${this.lineColor};stroke-width:${this.lineWidth}" />
+        <polyline stroke-linecap="round" stroke-linejoin="${this.lineJoin}" id="Line${lock_name}" points="" style="fill:none;stroke:${this.lineColor};stroke-width:${this.lineWidth}" />
         </svg>`
 
         this.LockId_width = document.getElementById(lock_name).getAttribute('width')
@@ -97,6 +99,7 @@ function AndroidSchemaLock(element,lock_name=null){
 
     this.lock.addEventListener("mousedown", function(event){
         
+        document.getElementById(lock_name).style.backgroundColor=_this.bColorOnMouseDown
         _this.currentPin = []
         _this.currentPinNumber = []
         var e = 0

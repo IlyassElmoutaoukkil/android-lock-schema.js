@@ -78,6 +78,9 @@ color of unactiving points (hex code, rgb, ...; default: 'red')
 ### bColorOnMouseMove  
 background color whene the mouse move (hex code, rgb, ...; default: 'yellow')
 
+### bColorOnMouseDown  
+background color whene the mouse is down (hex code, rgb, ...; default: 'blue')
+
 ### newActivePointsColor  
 new Active Points Color (hex code, rgb, ...; default: 'black')
 
@@ -86,6 +89,9 @@ line color (hex code, rgb, ...; default: 'white')
 
 ### lineWidth  
 line width (int; default: 10)
+
+### lineJoin
+line join (int (arcs|bevel|miter|miter-clip|round); default: 'round')
 
 ### roundedPointStroke  
 circle arround the activated point stroke width (int; default: 3)
