@@ -11,6 +11,7 @@ function AndroidSchemaLock(element,lock_name=null){
     this.Line = ""
     this.roundedActivePoint = true // show a circle arround the active point
     this.lockPointsDimentions = 10 //dimension of the lock points
+    this.lockPointsColor = 'white'
     this.lockColor = 'red'; 
     this.lockHeight = 500 //dimension of the lock (px, %, rem, ...)
     this.lockWidth = 500 //dimension of the lock (px, %, rem, ...)
@@ -40,35 +41,35 @@ function AndroidSchemaLock(element,lock_name=null){
 
     this.render = function () {
         this.lock.innerHTML=`<svg id="${lock_name}" height="${this.lockHeight}" width="${this.lockWidth}" style="background-color: ${this.lockColor}">
-        <ellipse class="${lock_name}" id="${lock_name}_1" data="1" cx="25%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_1" data="1" cx="25%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_1_r" data="1" cx="25%" cy="25%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
-        <ellipse class="${lock_name}" id="${lock_name}_2" data="2" cx="50%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_2" data="2" cx="50%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_2_r" data="1" cx="50%" cy="25%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
-        <ellipse class="${lock_name}" id="${lock_name}_3" data="3" cx="75%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_3" data="3" cx="75%" cy="25%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_3_r" data="1" cx="75%" cy="25%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
 
 
-        <ellipse class="${lock_name}" id="${lock_name}_4" data="4" cx="25%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_4" data="4" cx="25%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_4_r" data="1" cx="25%" cy="50%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
-        <ellipse class="${lock_name}" id="${lock_name}_5" data="5" cx="50%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_5" data="5" cx="50%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_5_r" data="1" cx="50%" cy="50%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
-        <ellipse class="${lock_name}" id="${lock_name}_6" data="6" cx="75%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_6" data="6" cx="75%" cy="50%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_6_r" data="1" cx="75%" cy="50%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
 
 
-        <ellipse class="${lock_name}" id="${lock_name}_7" data="7" cx="25%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_7" data="7" cx="25%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_7_r" data="1" cx="25%" cy="75%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
         
-        <ellipse class="${lock_name}" id="${lock_name}_8" data="8" cx="50%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_8" data="8" cx="50%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_8_r" data="1" cx="50%" cy="75%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
         
-        <ellipse class="${lock_name}" id="${lock_name}_9" data="9" cx="75%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:white" />
+        <ellipse class="${lock_name}" id="${lock_name}_9" data="9" cx="75%" cy="75%" rx="${this.lockPointsDimentions}" ry="${this.lockPointsDimentions}" style="fill:${this.lockPointsColor}" />
         <ellipse class="${lock_name}_round" id="${lock_name}_9_r" data="1" cx="75%" cy="75%" rx="30" ry="30" style="fill:transparent;stroke:transparent;stroke-width:${this.roundedPointStroke}" />
 
         <polyline stroke-linecap="round" stroke-linejoin="${this.lineJoin}" id="Line${lock_name}" points="" style="fill:none;stroke:${this.lineColor};stroke-width:${this.lineWidth}" />

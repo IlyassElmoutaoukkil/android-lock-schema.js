@@ -12,7 +12,7 @@
     <div style="display: flex;height: 100%;">
         <div style="width: 50%;display: flex;"><div style="margin: auto;" class="android_schema_lock" ></div></div>
         <div style="width: 50%;">
-            <h1>Controllers</h1>
+            <h1 >Controllers</h1>
             <div style="display: flex;">
                 <div style="margin: 0px 20px;border-right:1px solid #00000040">
                     <div class="controller" >
@@ -34,12 +34,22 @@
                         <label for="lockPointsDimentions"><b>lockPointsDimentions</b></label>
                         <div><input name="lockPointsDimentions" id="lockPointsDimentions" type="number" value="10"></div>
                     </div>
+
+                    <div class="controller" >
+                        <label for="lockPointsColor"><b>lockPointsColor</b></label>
+                        <div><input name="lockPointsColor" id="lockPointsColor" type="color" value="#ffffff"></div>
+                    </div>
                 </div>
                 
                 <div>
                     <div class="controller" >
                         <label for="unActivePointColor"><b>unActivePointColor</b></label>
                         <div><input name="unActivePointColor" id="unActivePointColor" type="color" ></div>
+                    </div>
+
+                    <div class="controller" >
+                        <label for="newActivePointsColor"><b>newActivePointsColor</b></label>
+                        <div><input name="newActivePointsColor" id="newActivePointsColor" type="color" ></div>
                     </div>
     
                     <div class="controller" >
@@ -81,6 +91,7 @@
     lock.unActivePointColor = 'red'
     lock.bColorOnMouseMove = 'yellow'
     lock.lineJoin = 'round'
+    lock.lockPointsColor = 'white'
     lock.render()
 
     lock.on('SchemaDrawingStarted',function(e){
@@ -114,9 +125,18 @@
         lock.lockPointsDimentions = this.value
         lock.render()
     })
+    document.getElementById('lockPointsColor').addEventListener('change',function(){
+        lock.lockPointsColor = this.value
+        lock.render()
+    })
 
     document.getElementById('unActivePointColor').addEventListener('change',function(){
         lock.unActivePointColor = this.value
+        lock.render()
+    })
+    
+    document.getElementById('newActivePointsColor').addEventListener('change',function(){
+        lock.newActivePointsColor = this.value
         lock.render()
     })
     
