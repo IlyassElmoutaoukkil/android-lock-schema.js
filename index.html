@@ -39,6 +39,10 @@
                         <label for="lockPointsColor"><b>lockPointsColor</b></label>
                         <div><input name="lockPointsColor" id="lockPointsColor" type="color" value="#ffffff"></div>
                     </div>
+                    <div class="controller" >
+                        <label for="roundedPointStrokeColor"><b>roundedPointStrokeColor</b></label>
+                        <div><input name="roundedPointStrokeColor" id="roundedPointStrokeColor" type="color" ></div>
+                    </div>
                 </div>
                 
                 <div>
@@ -56,12 +60,12 @@
                         <label for="lineColor"><b>lineColor</b></label>
                         <div><input name="lineColor" id="lineColor" type="color" ></div>
                     </div>
-    
+                    
                     <div class="controller" >
                         <label for="lineWidth"><b>lineWidth</b></label>
                         <div><input name="lineWidth" id="lineWidth" type="number" value="10" ></div>
                     </div>
-    
+                    
                     <div class="controller" >
                         <label for="lineJoin"><b>lineJoin</b></label>
                         <div><select name="lineJoin" id="lineJoin" type="number">
@@ -72,8 +76,13 @@
                             <option value="round">round</option>
                         </select>
                     </div>
-                </div>
-                
+                    
+                    
+                    </div>
+                    <div class="controller" >
+                            <label for="roundedPointStroke"><b>roundedPointStroke</b></label>
+                            <div><input name="roundedPointStroke" id="roundedPointStroke" type="number" ></div>
+                    </div>
             </div>
         </div>
     </div>
@@ -151,6 +160,14 @@
     })
     document.getElementById('lineJoin').addEventListener('change',function(){
         lock.lineJoin = this.value
+        lock.render()
+    })
+    document.getElementById('roundedPointStroke').addEventListener('change',function(){
+        lock.roundedPointStroke = this.value
+        lock.render()
+    })
+    document.getElementById('roundedPointStrokeColor').addEventListener('change',function(){
+        lock.roundedPointStrokeColor = this.value
         lock.render()
     })
 

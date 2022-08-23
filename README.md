@@ -5,7 +5,7 @@ AndroidSchema is a small library to empliment Android Schema lock, where you can
 var lock = new AndroidSchemaLock(element,'lock_name')
 ```
 element is the name of the html tag where you want to add the lock,
-lock_name is a name by your choice, 
+lock_name is a name by your choice,
 
 ## API
 
@@ -18,7 +18,7 @@ AndroidSchema has three main events,
 
 --------------------------------------------------------
 ### SchemaDrawingStarted
-return int
+returns int
 
 
 ```js
@@ -31,8 +31,7 @@ lets you lesten whene the user started drawing the schema and return the first p
 
 ------------------------------------------------
 ### SchemaDrawingDone
-
-return array,int
+returns array,int
 
 ```js
     lock.on('SchemaDrawingDone',function(e){
@@ -45,7 +44,7 @@ return array,int
 
 --------------------------------------------------------
 ### NewActivatePoint
-return array,int
+returns array,int
 
   ```js
     lock.on('NewActivatePoint',function(e){
