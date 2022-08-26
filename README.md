@@ -93,10 +93,10 @@ line width (int; default: 10)
 line join (int (arcs|bevel|miter|miter-clip|round); default: 'round')
 
 ### roundedPointStroke  
-circle arround the activated point stroke width (int; default: 3)
+circle arround the activated point stroke's width (int; default: 3)
 
 ### roundedPointStrokeColor  
-circle arround the activated point stroke color  (hex code, rgb, ...; default: 'green')
+circle arround the activated point stroke's color  (hex code, rgb, ...; default: 'green')
 
 
 
